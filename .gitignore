@@ -1,0 +1,18 @@
+# Logs
+*.log
+logs/
+data/
+
+# Filebeat runtime data
+filebeat/data/
+filebeat/logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
