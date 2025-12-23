@@ -52,5 +52,5 @@ python3 app.py
 
 🎯 The final outcome is a **live, interactive observability dashboard** that allows operators to immediately understand application behavior, spot anomalies through color-coded indicators, and receive alerts before issues escalate.
 
-👨‍💻 Author: **Nikhil Nacholiya**  
+👨‍💻 Author: **Nikhil Acholiya**  
 📜 License: Intended for learning, demonstration, and portfolio use.
