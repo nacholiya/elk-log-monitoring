@@ -1,0 +1,23 @@
+{
+  "python-logs": {
+    "description": "Parse Python app logs safely",
+    "processors": [
+      {
+        "grok": {
+          "field": "message",
+          "patterns": [
+            "%{TIMESTAMP_ISO8601:parsed.ts} %{LOGLEVEL:parsed.log.level} %{DATA:parsed.service.name} %{GREEDYDATA:parsed.msg}"
+          ],
+          "ignore_failure": true
+        }
+      },
+      {
+        "drop": {
+          "if": "ctx.parsed == null || ctx.parsed.log == null || ctx.parsed.log.level == null"
+        }
+      }
+    ],
+    "created_date_millis": 1766406130904,
+    "modified_date_millis": 1766406404726
+  }
+}

@@ -1,0 +1,34 @@
+PUT kbn:/api/alerting/rule/f8ce7922-11e9-46f3-8ffb-31eb02a6f177
+{
+  "name": "ERROR Spike Alert (Last 5 min)",
+  "tags": [],
+  "schedule": {
+    "interval": "1m"
+  },
+  "params": {
+    "aggType": "count",
+    "termSize": 5,
+    "thresholdComparator": ">",
+    "timeWindowSize": 5,
+    "timeWindowUnit": "m",
+    "groupBy": "all",
+    "threshold": [
+      10
+    ],
+    "timeField": "@timestamp",
+    "index": [
+      "filebeat-*"
+    ],
+    "filterKuery": "parsed.log.level : \"ERROR\""
+  },
+  "artifacts": {
+    "dashboards": [],
+    "investigation_guide": {
+      "blob": ""
+    }
+  },
+  "actions": [],
+  "alert_delay": {
+    "active": 1
+  }
+}

@@ -1,0 +1,17 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/myapp/app.log
+
+
+output.elasticsearch:
+  hosts: ["https://localhost:9200"]
+  username: "elastic"
+  password: "KBw1zJ11uNNCyot0E8m2"
+  ssl.verification_mode: none
+  pipeline: python-logs
+
+setup.kibana:
+  host: "http://localhost:5601"
+
